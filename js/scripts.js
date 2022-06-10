@@ -3,27 +3,35 @@
 function inputNumber(userInput){
    let outputArray = []
     for (let index = 0; index <= userInput; index++) {
-       outputArray.push(index);
+       outputArray.push(index .toString().split(","));
     }
-       return outputArray;
+       
+        return outputArray;
   }
-  function phraseNumbers (responseArray){
+  function phraseNumbers (userInput){
    let respondingArray = [];
-   responseArray.forEach(function (element) {
-        if (element.toString().includes(3)) {
-          element = "Won't you be my neighbor?";
-          respondingArray.push(element);
-      } else if (element.toString().includes(2)) {
-          element = "*Boop*";
-          respondingArray.push(element);
-       } else if (element.toString().includes(1)) {
-          element = "*Beep*";
-          respondingArray.push(element);
+   const outputArray = inputNumber(userInput);
+    respondingArray.forEach(function (phrase) {
+        if (phrase.includes(3)) {
+          phrase = "Won't you be my neighbor?";
+          respondingArray.push(phrase);
+      } else if (phrase.includes(2)) {
+          phrase = "*Boop*";
+          respondingArray.push(phrase);
+       } else if (phrase.includes(1)) {
+          phrase = "*Beep*";
+          respondingArray.push(phrase);
       } else {
-          respondingArray.push(element);
+          respondingArray.push(phrase);
        }
   });
 return respondingArray;
 }
 
-
+$(document).ready(function () {
+  $("form#userInput").submit(function (event) {
+    event.preventDefault();
+    const results = result (userInput);
+    $("#output").text(results);
+  });
+});
