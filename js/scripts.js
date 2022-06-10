@@ -1,24 +1,25 @@
-
-let stringArray = []
- let userNumber = $("input#number").val();
- for(index = 0, index <= user , index++) {
-  if (index.toString().includes (3)) {
-    stringHolder.push("won't you be my neighbor")
-    }else if(index.toString().includes(2)) {
-      stringHolder.push("*boop*")
-    }else if(index.toString().includes(1)) {
-      stringHolder.push("*beep*")
-    }else {
-      stringHolder.push(index);
-    }
+function result (number){
+ let stringArray=["#number"];
+  // for (let index = 0; index <= number;);{
+   stringArray.push(number)
+   return stringArray;
+   
   }
-  return stringArray
-
-  
 
 
+$(document).ready(function(){
+  $("number").submit(function(event) {
+    event.preventDefault();
+    const number = ($("#number").val());
+    const results = result( stringArray);
+    $("#output").text(results);
+    
+  });
+});
 
- 
+
+
+
 
 
 
