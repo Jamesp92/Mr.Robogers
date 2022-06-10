@@ -2,25 +2,28 @@
 
 function inputNumber(userInput){
    let outputArray = []
-    for (let i = 0; userInput <= i; i++) {
-      ;
-      if (i.includes(3)) {
-        outputArray.push(" Won't you be my neighbor");
-      } else if (i.includes(2)) {
-        outputArray.push('*Boop*');
-      } else if (i.includes(1)) {
-        outputArray.push(' *Beep*');
-      } else {
-        ouputArray.push(" ");
-      }
+    for (let index = 0; index <= userInput; index++) {
+       outputArray.push(index);
     }
-     return outputArray;
+       return outputArray;
+  }
+  function phraseNumbers (responseArray){
+   let respondingArray = [];
+   responseArray.forEach(function (element) {
+        if (element.toString().includes(3)) {
+          element = "Won't you be my neighbor?";
+          respondingArray.push(element);
+      } else if (element.toString().includes(2)) {
+          element = "*Boop*";
+          respondingArray.push(element);
+       } else if (element.toString().includes(1)) {
+          element = "*Beep*";
+          respondingArray.push(element);
+      } else {
+          respondingArray.push(element);
+       }
+  });
+return respondingArray;
 }
 
 
-$(document).ready(function () {
-	$('form#userInput').submit(function (event) {
-		event.preventDefault();
-		$('#output').text(outputArray);
-	});
-});
