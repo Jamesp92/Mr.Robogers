@@ -1,4 +1,16 @@
+//business logic
+
+function result(userInput){
 let array = []
-  let inputNum = $("input#number").val();
-  for(i = 0; i <= num; i++) 
+ for (let index = 0; index <= userInput;);{
+  array.push(index)
+  if (index.toString().includes(3)) {
+      array.push("wont you be my neighbor")
+  }else if (index.toString().includes(2))
+  
+
+ }
+  return array;
+}
+
     
