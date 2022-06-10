@@ -1,19 +1,28 @@
 //business logic
 
-function result(userInput){
-let array = []
- for (let index = 0; index <= userInput;);{
-  array.push(index)
-  if (index.toString().includes(3)) {
-      array.push("wont you be my neighbor")
-  }else if (index.toString().includes(2)){
-    array.push("*boop*")
-  }else if (index.toString().includes(1)){
-    array.push("*beep*")
-  }
-
+function inputNumber(element){
+   let outputArray = []
+    for (let i = 0; number <= i; i++) {
+      const element = i.toString();
+      if (element.includes('3')) {
+        numberArray.push(" Won't you be my neighbor?");
+      } else if (element.includes('2')) {
+        numberArray.push(' Boop!');
+      } else if (element.includes('1')) {
+        numberArray.push(' Beep!');
+      } else {
+        numberArray.push(" " + element);
+      }
+    }
+     return outputArray;
 }
-  return array;
-}
 
-    
+
+$(document).ready(function () {
+	$('#userInput').submit(function (event) {
+		event.preventDefault();
+		let roboNums = parseInt ('#userInput').val();
+		let answer = inputNumber(output);
+		$('#output').text(outputArray);
+	});
+});

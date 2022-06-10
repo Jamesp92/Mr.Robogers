@@ -1,4 +1,4 @@
-Describe: result()
+Describe: inputNumber()
 
 Test: should return a new array with numbers between 0 and the number the user inputs .
 Code: result(7); 
