@@ -1,17 +1,18 @@
 //business logic
 
-function inputNumber(element){
+function inputNumber(userInput){
    let outputArray = []
     for (let i = 0; number <= i; i++) {
-      const element = i.toString();
-      if (element.includes('3')) {
-        numberArray.push(" Won't you be my neighbor?");
-      } else if (element.includes('2')) {
-        numberArray.push(' Boop!');
-      } else if (element.includes('1')) {
-        numberArray.push(' Beep!');
+      ;
+      let numbers = (toString())
+      if (i.includes(3)) {
+        outputArray.push(" Won't you be my neighbor");
+      } else if (i.includes(2)) {
+        outputArray.push(' *Boop*');
+      } else if (i.includes(1)) {
+        outputArray.push(' *Beep*');
       } else {
-        numberArray.push(" " + element);
+        ouputArray.push(" " + element);
       }
     }
      return outputArray;
@@ -21,8 +22,6 @@ function inputNumber(element){
 $(document).ready(function () {
 	$('#userInput').submit(function (event) {
 		event.preventDefault();
-		let roboNums = parseInt ('#userInput').val();
-		let answer = inputNumber(output);
 		$('#output').text(outputArray);
 	});
 });
