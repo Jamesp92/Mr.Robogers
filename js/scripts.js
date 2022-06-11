@@ -1,11 +1,24 @@
- function userInputNumbers (input)
- let numbers =[]
- for (let i = 0; i  <= userInput; 1++){
-     numbers.push(1)
-   if (numbers[i].toString().includes(3))
-    numbers[i] = "wont you be my neighbor?"
-} else if (numbers[i].toString().includes(2)){
-   numbers[i] = "*boop*"
-}
+function userInputNumbers(input) {
+   let numbers = []
+   for (let i = 0; i <= input; i ++) {
+     numbers.push(i)
+     if (numbers[i].toString().includes(3)) {
+       numbers[i] = "Won't you be my neighbor?"
+     } else if (numbers[i].toString().includes(2)) {
+       numbers[i] = "*boop*"
+     } else if (numbers[i].toString().includes(1)) {
+       numbers[i] = "*beep*"
+     }
+   }  
+   return numbers
+ }
+
+ $(document).ready(function () {
+   $("form#input").submit(function (event) { 
+     event.preventDefault();
+    let result = userInputNumbers($("numbers").val());
+     $("#output").text(result);
+   });
+});
 
 
