@@ -1,4 +1,6 @@
 
+//business logic
+
 function userInputNumbers(userNum) {
    let numbers = []
    for (let i = 0; i <= userNum; i ++) {
@@ -14,7 +16,7 @@ function userInputNumbers(userNum) {
    return numbers
 }
 
-
+// ui logic
 
 $(document).ready(function() {
   $("#form").submit(function (event) {
@@ -23,6 +25,7 @@ $(document).ready(function() {
      let result = userInputNumbers(userNumber);
      $("#output").text(result);
      $("#output").show() 
+      
 });
 });
 
